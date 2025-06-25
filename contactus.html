@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swasthya - Home</title>
+    <title>Swasthya - Contact Us</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
         * {
@@ -53,7 +53,6 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
-            font-weight: 500;
             font-size: 16px;
         }
         
@@ -74,119 +73,166 @@
             cursor: pointer;
         }
         
+        /* Color Bar Section */
+        .color-bar {
+            background-color: #00796B;
+            padding: 40px 50px;
+            color: white;
+        }
+        
+        .color-bar h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .color-bar p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
         /* Main Content Styles */
         .main-content {
             padding: 40px 50px;
-        }
-
-        /* Documents Section */
-        .documents-container {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
-        }
-
-        .documents-title {
-            font-size: 24px;
-            color: #00796B;
-            margin-bottom: 20px;
-        }
-
-        .documents-list {
             display: flex;
-            flex-direction: column;
-            gap: 15px;
+            gap: 40px;
         }
-
-        .document-item {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            border: 1px solid #e0e0e0;
-            position: relative;
-        }
-
-        .document-preview {
-            width: 60px;
-            height: 60px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-right: 15px;
-            cursor: pointer;
-        }
-
-        .document-icon {
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #00796B;
-            color: white;
-            border-radius: 5px;
-            margin-right: 15px;
-            font-size: 24px;
-        }
-
-        .document-info {
+        
+        .left-half, .right-half {
             flex: 1;
         }
-
-        .document-name {
-            font-weight: 600;
+        
+        h2 {
+            color: #00796B;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .left-half p {
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .form-group label {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .form-group input, 
+        .form-group textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .name-fields {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .name-fields .form-group {
+            flex: 1;
+        }
+        
+        .submit-btn {
+            background-color: #00796B;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: fit-content;
+        }
+        
+        .submit-btn:hover {
+            background-color: #005f56;
+        }
+        
+        /* Right Half Styles */
+        .contact-info-box {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            gap: 15px;
+        }
+        
+        .contact-icon {
+            background-color: #e0f2f1;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00796B;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h3 {
+            margin-bottom: 8px;
+            color: #00796B;
+        }
+        
+        .contact-details p {
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .contact-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .contact-row .contact-info-box {
+            flex: 1;
+        }
+        
+        .emergency-box {
+            background-color: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+        .emergency-box h3 {
+            color: #f44336;
+            margin-bottom: 10px;
+        }
+        
+        .emergency-box p {
+            color: #555;
+            line-height: 1.6;
             margin-bottom: 5px;
         }
-
-        .document-meta {
-            font-size: 14px;
-            color: #666;
-        }
-
-        .no-documents {
-            text-align: center;
-            padding: 30px;
-            color: #666;
-            font-size: 16px;
-        }
-
-        /* Zoom Modal Styles */
-        .zoom-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .zoom-content {
-            max-width: 90%;
-            max-height: 90%;
-        }
-
-        .zoom-content img {
-            width: 100%;
-            height: auto;
-            max-height: 80vh;
-            object-fit: contain;
-        }
-
-        .close-zoom {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 35px;
+        
+        .emergency-number {
             font-weight: bold;
-            cursor: pointer;
+            font-size: 1.2rem;
+            color: #f44336;
         }
 
 
@@ -317,7 +363,7 @@
         <nav class="nav-menu">
             <a href="homepageee.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="about.html">Our Services</a>
+            <a href="ourservices.html">Our Services</a>
             <a href="blog.html">Blog</a>
             <a href="fnq.html">F&Q</a>
             <a href="contactus.html">Contact Us</a>
@@ -335,118 +381,266 @@
         </div>
     </header>
     
+    <!-- Color Bar Section -->
+    <section class="color-bar">
+        <h1>Contact Us</h1>
+        <p>We're here to help. Reach out to us with any questions or concerns.</p>
+    </section>
+    
     <!-- Main Content Section -->
     <main class="main-content">
-        <div class="documents-container">
-            <h2 class="documents-title">Your Uploaded Documents</h2>
-            <div class="documents-list" id="documentsList">
-                <!-- Documents will be inserted here by JavaScript -->
+        <!-- Left Half - Contact Form -->
+        <div class="left-half">
+            <h2>Get in Touch</h2>
+            <p>Have questions about our services or need to schedule an appointment? Fill out the form and our team will get back to you as soon as possible.</p>
+            
+            <form class="contact-form">
+                <div class="name-fields">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send the Message</button>
+            </form>
+        </div>
+        
+        <!-- Right Half - Contact Information -->
+        <div class="right-half">
+            <h2>Contact Information</h2>
+            
+            <div class="contact-row">
+                <div class="contact-info-box">
+                    <div class="contact-icon">
+                        <i class='bx bx-phone'></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Phone</h3>
+                        <p>+91 987-654-3210</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-box">
+                    <div class="contact-icon">
+                        <i class='bx bx-envelope'></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <p>info@swasthya.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-row">
+                <div class="contact-info-box">
+                    <div class="contact-icon">
+                        <i class='bx bx-map'></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Location</h3>
+                        <p>123 Health Street, Medical District, Bangalore, Karnataka 560001</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-box">
+                    <div class="contact-icon">
+                        <i class='bx bx-time'></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Hours</h3>
+                        <p>Mon-Fri: 8:00 AM - 8:00 PM<br>
+                           Sat: 9:00 AM - 5:00 PM<br>
+                           Sun: Emergency only</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="emergency-box">
+                <h3>Emergency Contact</h3>
+                <p>For medical emergencies, please call our 24/7 emergency hotline:</p>
+                <p class="emergency-number">+91 999-888-7777</p>
             </div>
         </div>
     </main>
 
-    <!-- Zoom Modal -->
-    <div id="zoomModal" class="zoom-modal">
-        <span class="close-zoom">&times;</span>
-        <div class="zoom-content">
-            <img id="zoomedImage" src="" alt="Zoomed Document">
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-header">
+                <h2>SWASTHYA</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class='bx bx-phone'></i>
+                        <span>+91 123-123-1238</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class='bx bx-envelope'></i>
+                        <span>swasthyacare@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="links-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="links-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Health Card</a></li>
+                        <li><a href="#">Primary Care</a></li>
+                        <li><a href="#">Specialty Care</a></li>
+                        <li><a href="#">Emergency Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="links-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Swasthya. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-    <script>
-        // Function to display uploaded documents
-        function displayUploadedDocuments() {
-            const documentsList = document.getElementById('documentsList');
-            const uploadedFiles = JSON.parse(localStorage.getItem('uploadedFiles')) || [];
-            
-            // Clear existing content
-            documentsList.innerHTML = '';
-            
-            if (uploadedFiles.length === 0) {
-                documentsList.innerHTML = `
-                    <div class="no-documents">
-                        No previous prescriptions have been uploaded
-                    </div>
-                `;
-                return;
+    <!-- Add this CSS to your style section -->
+    <style>
+        /* Footer Styles */
+        .footer {
+            background: linear-gradient(135deg,  #004d40,  #00796B);
+            color: white;
+            padding: 50px 0 0;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 50px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .footer-header h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .links-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .links-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .links-column ul {
+            list-style: none;
+        }
+
+        .links-column li {
+            margin-bottom: 10px;
+        }
+
+        .links-column a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .links-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .footer-links {
+                flex-direction: column;
+                gap: 30px;
             }
             
-            // Display each document
-            uploadedFiles.forEach((file, index) => {
-                const fileSize = formatFileSize(file.size);
-                const fileType = file.type.split('/')[0]; // 'image' or 'application' etc.
-                
-                let previewContent = '';
-                if (fileType === 'image') {
-                    previewContent = `
-                        <img src="${file.data}" class="document-preview" alt="${file.name}" 
-                             onclick="zoomImage('${file.data}')">
-                    `;
-                } else {
-                    // For non-image files, show an icon
-                    previewContent = `
-                        <div class="document-icon">
-                            <i class='bx ${getFileIcon(file.type)}'></i>
-                        </div>
-                    `;
-                }
-                
-                const documentItem = document.createElement('div');
-                documentItem.className = 'document-item';
-                documentItem.innerHTML = `
-                    ${previewContent}
-                    <div class="document-info">
-                        <div class="document-name">${file.name}</div>
-                        <div class="document-meta">${fileSize} • ${file.type}</div>
-                    </div>
-                `;
-                
-                documentsList.appendChild(documentItem);
-            });
-        }
-        
-        // Helper function to format file size
-        function formatFileSize(bytes) {
-            if (bytes === 0) return '0 Bytes';
-            const k = 1024;
-            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-            const i = Math.floor(Math.log(bytes) / Math.log(k));
-            return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
-        }
-        
-        // Helper function to get file icon based on type
-        function getFileIcon(type) {
-            if (type.includes('pdf')) return 'bxs-file-pdf';
-            if (type.includes('word')) return 'bxs-file-doc';
-            if (type.includes('excel')) return 'bxs-file-xls';
-            if (type.includes('image')) return 'bxs-file-image';
-            if (type.includes('text')) return 'bxs-file-txt';
-            return 'bxs-file';
-        }
-        
-        // Zoom image functionality
-        function zoomImage(imageSrc) {
-            const modal = document.getElementById('zoomModal');
-            const zoomedImg = document.getElementById('zoomedImage');
-            zoomedImg.src = imageSrc;
-            modal.style.display = 'flex';
-        }
-        
-        // Close the zoom modal
-        document.querySelector('.close-zoom').addEventListener('click', function() {
-            document.getElementById('zoomModal').style.display = 'none';
-        });
-        
-        // Close modal when clicking outside the image
-        window.addEventListener('click', function(event) {
-            const modal = document.getElementById('zoomModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
             }
-        });
-        
-        // Display documents when page loads
-        document.addEventListener('DOMContentLoaded', displayUploadedDocuments);
-    </script>
+        }
+    </style>
 </body>
 </html>
