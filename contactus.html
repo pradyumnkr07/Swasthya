@@ -234,6 +234,123 @@
             font-size: 1.2rem;
             color: #f44336;
         }
+
+
+
+
+        /* Coin Button Styles */
+        .coin-btn {
+            background: linear-gradient(135deg, #FFD700, #FFC000);
+            color: #8B7500;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .coin-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        }
+
+        .coin-btn i {
+            font-size: 1.2rem;
+        }
+
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #00796B;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* New wrapper for coin and profile */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .earn-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px 20px;
+            }
+            
+            .nav-menu {
+                gap: 15px;
+            }
+            
+            .coins-banner {
+                padding: 60px 20px;
+            }
+            
+            .coins-content {
+                padding: 0 20px;
+            }
+            
+            .earn-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .coins-banner h1 {
+                font-size: 2.2rem;
+            }
+
+            .header-actions {
+                margin-top: 10px;
+            }
+        }
+
+        .btn {
+            text-decoration: none;
+        }
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -252,9 +369,16 @@
             <a href="contactus.html">Contact Us</a>
         </nav>
         
-        <a href="profile.html" class="profile-icon">
-            <i class='bx bx-user'></i>
-        </a>
+        <div class="header-actions">
+            <a href="swasthyacoins.html" class="btn"><button class="coin-btn">
+                <i class='bx bx-coin'></i>
+                <span>1,250</span>
+            </button></a>
+            
+            <a href="profile.html" class="profile-icon">
+                <i class='bx bx-user'></i>
+            </a>
+        </div>
     </header>
     
     <!-- Color Bar Section -->
